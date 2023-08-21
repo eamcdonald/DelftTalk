@@ -149,9 +149,9 @@ Joint with F. Sukochev.}
 
 
 \begin{frame}{Introduction}
-This talk is mostly about the following paper
+This talk is mostly about the paper
 \begin{center}
-M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
+M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
 \emph{Math. Ann.} 383 (2022), no.1--2, 571--619.
 \end{center}
 \end{frame}
@@ -161,7 +161,6 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
         \item{} Operator Lipschitz functions: some basic concepts and history.
         \item{} Some very light background on Schatten ideals: the problem with $p<1.$
         \item{} Besov spaces and wavelets
-        \item{} Some further directions
     \end{enumerate}
 \end{frame}
 
@@ -239,7 +238,8 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
     The classical Bernstein inequality states that if $f \in L_{\infty}(\Rl)$ has Fourier transform supported in the interval $[-\sigma,\sigma],$ then
     \[
         \|f\|_{\mathrm{Lip}} \leq C\sigma \|f\|_{\infty}.
-    \]
+    \]\pause
+    Peller's theorem is a consequence of his \emph{operator Bernstein inequality}.
     \begin{theorem}[Peller (1990)]
         If $f \in L_{\infty}(\Rl)$ has Fourier transform supported in the interval $[-\sigma,\sigma],$ then
         \[
@@ -296,13 +296,29 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
         \|T+S\|_p \leq 2^{\frac1p-1}(\|T\|_p+\|S\|_p).
     $$
     \pause
-    While it still has a complete translation-invariant metric, $\Lc_p$ for $0 < p < 1$ can seem quite pathological:\pause
-    \begin{itemize}
-        \item{} There is \emph{no} Hahn-Banach theorem for $\Lc_p$;\pause
-        \item{} The unit ball of $\Lc_p$ is not convex;\pause
-        \item{} There is \emph{no} Bochner integration theory for $\Lc_p$-valued functions.
-    \end{itemize}
+    Nonetheless, we have
+    \[
+        \|T+S\|_p^p \leq \|T\|_p^p+\|S\|_p^p.
+    \]
 \end{frame}
+
+
+\begin{frame}{Geometry in $\Lc_p.$}
+    The unit ball $B = \{T\;:\; \|T\|_p\leq 1\}$ in $\Lc_p$ is not convex.
+
+    I.e., if $\xi_1,\ldots,\xi_n\in B$ then it might happen that
+    \[
+        \theta_1\xi_1+\cdots+\theta_n\xi_n)\notin B,\quad |\theta_1|+\cdots+|\theta_n|\leq 1.
+    \]
+    For this reason the theory of integration $\Lc_p$-valued functions is not straightforward. We could have continuous functions $f \in C([0,1],\Lc_p)$
+    whose integral is not in $\Lc_p.$\\
+    \pause
+    Instead, $B$ is only closed under $p$-convex combinations, i.e.
+    \[
+        \theta_1\xi_1+\cdots+\theta_n \xi_n \in B,\quad |\theta_1|^p+\cdots+|\theta_n|^p \leq 1.
+    \]
+\end{frame}
+
 
 \begin{frame}{$\Lc_p$-Lipschitz functions for $0 < p < 1.$}
     Which functions are Lipschitz in $\Lc_p$ when $0 < p < 1$? \\
@@ -326,6 +342,22 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Fourier multipliers}
+    An analogous issue is Fourier multipliers in $L_p(\Circ)$ for $0<p<1.$
+    \begin{theorem}
+        Let $m \in \ell_{\infty}(\Itgr)$ and $0<p<1.$ The Fourier multiplier
+        \[
+            T_m:L_2(\Circ)\to L_2(\Circ),\quad T_m(\exp(i\theta n)) = m(n)\exp(i\theta n),\quad n\in \Itgr
+        \]
+        is bounded on $L_p(\Circ)$ if and only if $m$ has the form
+        \[
+            m(n) = \sum_{j=0}^\infty c_j \exp(in\zeta_j),\quad n\in \Itgr
+        \]
+        where $\sum_{j} |c_j|^p < \infty.$
+    \end{theorem}
+    In other words, the only $L_p(\Circ)$ multipliers for $0<p<1$ are shift operators and $p$-convex combinations of shifts.
+\end{frame}
+
 \begin{frame}{Strategies to get $\Lc_p$-operator Lipschitz estimates}
     In the $\Lc_{\infty}$ case, we started with a class of functions $\{\exp(i\xi x)\}_{\xi\in \Rl}$ for which Lipschitz estimates are easy, and derived a more general class by taking convex combinations.
 
@@ -334,7 +366,6 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
         \sum_j c_j\psi_j
     \]
     are also $\Lc_p$-operator Lipschitz.
-
 \end{frame}
 
 \begin{frame}{Strategies to get $\Lc_p$-operator Lipschitz estimates}
@@ -413,7 +444,8 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
 \end{frame}
 
 \begin{frame}{Wavelet Bernstein inequality}
-    \begin{theorem}
+    How do we use wavelet methods? The key is again a Bernstein inequality.
+    \begin{theorem}[Meyer(?) (1980s)]
         Let $f\in L_{\infty}(\Rl)$ have Wavelet expansion
         \[
             f(t) = \sum_{j\in \Itgr} \sum_{k\in \Itgr} c_{j,k}\psi_{j,k}(t)
@@ -426,7 +458,7 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
 \end{frame}
 
 \begin{frame}{An $\Lc_p$-Lipschitz Bernstein inequality}
-        \begin{theorem}
+        \begin{theorem}[M.-Sukochev (2022)]
         Let $f\in L_{\frac{p}{p-1}}(\Rl)$ have Wavelet expansion
         \[
             f(t) = \sum_{j\in \Itgr} \sum_{k\in \Itgr} c_{j,k}\psi_{j,k}(t)
@@ -436,7 +468,7 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
             \|f\|_{\Lc_p-\mathrm{Lip}} \leq C2^{\frac{N}{p}} \|f\|_{\frac{p}{p-1}}.
         \]
     \end{theorem}
-    With $p=1,$ this is the wavelet analogy of Peller's Bernstein inequality. For $p<1$ it is new.
+    With $p=1,$ this is the wavelet analogy of Peller's operator Bernstein inequality. For $p<1$ it is new.
 \end{frame}
 
 \begin{frame}{Wavelets and Besov spaces}
@@ -448,6 +480,7 @@ M.~, Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
             \|f\|_{B^s_{p,q}}\approx \sum_{j\in \Itgr} 2^{jq(s+\frac{1}{2}-\frac{1}{p})}\left(\sum_{k\in \Itgr} |\langle f,\psi_{j,k}\rangle|^p\right)^{\frac{q}{p}} < \infty.
         \end{equation*}
     \end{theorem}
+    Using the $p$-triangle inequality and the $\Lc_p$-Lipschitz Bernstein inequality, we easily conclude that $\|f\|_{\Lc_p-\mathrm{Lip}} \lesssim \|f\|_{B^{\frac1p}_{\frac{p}{1-p},p}(\Rl)}.$
 \end{frame}
 
 
