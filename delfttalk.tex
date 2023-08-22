@@ -293,7 +293,7 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
     $$
     This is not a norm, merely a quasi-norm. There is no triangle inequality, merely a quasi-triangle inequality
     $$
-        \|T+S\|_p \leq 2^{\frac1p-1}(\|T\|_p+\|S\|_p).
+        \|T+S\|_p \leq 2^{\frac11-p}(\|T\|_p+\|S\|_p).
     $$
     \pause
     Nonetheless, we have
@@ -308,7 +308,7 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
 
     I.e., if $\xi_1,\ldots,\xi_n\in B$ then it might happen that
     \[
-        \theta_1\xi_1+\cdots+\theta_n\xi_n)\notin B,\quad |\theta_1|+\cdots+|\theta_n|\leq 1.
+        \theta_1\xi_1+\cdots+\theta_n\xi_n\notin B,\quad |\theta_1|+\cdots+|\theta_n|\leq 1.
     \]
     For this reason the theory of integration $\Lc_p$-valued functions is not straightforward. We could have continuous functions $f \in C([0,1],\Lc_p)$
     whose integral is not in $\Lc_p.$\\
@@ -375,7 +375,7 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
     \]
     Essentially every smooth function on $\Rl$ belongs to the closed convex hull of $\{f_\lambda\}_{\Im(\lambda)\neq 0}.$\\
     \pause
-    I tried for a long time to characterize functions $f$ having a decomposition like
+    I tried for a long time to characterise functions $f$ having a decomposition like
     \[
         f(t) = \sum_{j=0}^\infty c_j|\Im(\lambda_j)|^2f_{\lambda_j}(t)
     \]
@@ -411,7 +411,7 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
         \int_0^\infty \left(\int_{-\infty}^\infty \left|\sum_{k=0}^n \binom{n}{k}(-1)^{n-k}f(t+kh)\right|^{\frac{p}{1-p}}\,dt\right)^{1-p} \frac{dh}{h^2} < \infty.
     \end{equation*}
     \pause
-    For example, if $f' \in W^{k}_{\frac{p}{p-1}}(\Rl)$ where $k > \frac{1}{p}-1$ then $f$ is $\Lc_p$-Lipschitz.
+    For example, if $f' \in W^{k}_{\frac{p}{1-p}}(\Rl)$ where $k > \frac{1}{p}-1$ then $f$ is $\Lc_p$-Lipschitz.
 \end{frame}
 
 \begin{frame}{What else can we do?}
@@ -420,7 +420,7 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
     \begin{itemize}
         \item{} For all $n\geq 0$, the inequality
         $$
-            \sum_{k=0}^n \mu(k,f(A)-f(B))^p \lesssim (\|f'\|_\infty+\|f\|_{\dot{B}^{\frac{1}{p}}_{\frac{p}{p-1},p}})\sum_{k=0}^n \mu(k,A-B)^p
+            \sum_{k=0}^n \mu(k,f(A)-f(B))^p \lesssim (\|f'\|_\infty+\|f\|_{\dot{B}^{\frac{1}{p}}_{\frac{p}{1-p},p}})\sum_{k=0}^n \mu(k,A-B)^p
         $$
         (this recovers the previous result with $n=\infty.$)\pause
         \item{} H\"older-type estimates of the form
@@ -436,7 +436,7 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
     \[
         f(t) = \sum_{j\in \Itgr} \sum_{k\in \Itgr} c_{j,k}\psi_{j,k}(t)
     \]
-    then the coefficients $c_{j,k}$ for $j>N$ represent oscillatoins of $f$ on the scale $\sim 2^{-N}.$ A function of the form
+    then the coefficients $c_{j,k}$ for $j>N$ represent oscillations of $f$ on the scale $\sim 2^{-N}.$ A function of the form
     \[
         f(t) = \sum_{j<N} \sum_{k\in \Itgr}c_{j,k}\psi_{j,k}(t)
     \]
@@ -459,13 +459,13 @@ M., Sukochev, Lipschitz estimates in quasi-Banach Schatten ideals.
 
 \begin{frame}{An $\Lc_p$-Lipschitz Bernstein inequality}
         \begin{theorem}[M.-Sukochev (2022)]
-        Let $f\in L_{\frac{p}{p-1}}(\Rl)$ have Wavelet expansion
+        Let $f\in L_{\frac{p}{1-p}}(\Rl)$ have Wavelet expansion
         \[
             f(t) = \sum_{j\in \Itgr} \sum_{k\in \Itgr} c_{j,k}\psi_{j,k}(t)
         \]
         where $c_{j,k}=0$ for $k>N.$ Then
         \[
-            \|f\|_{\Lc_p-\mathrm{Lip}} \leq C2^{\frac{N}{p}} \|f\|_{\frac{p}{p-1}}.
+            \|f\|_{\Lc_p-\mathrm{Lip}} \leq C2^{\frac{N}{p}} \|f\|_{\frac{p}{1-p}}.
         \]
     \end{theorem}
     With $p=1,$ this is the wavelet analogy of Peller's operator Bernstein inequality. For $p<1$ it is new.
